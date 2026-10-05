@@ -10,38 +10,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hello World App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+      debugShowCheckedModeBanner: false,
+      title: 'Hello World',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Hello World'),
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white,
         ),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Hello World'),
-        backgroundColor: Colors.deepPurple,
-        foregroundColor: Colors.white,
-      ),
-      body: const Center(
-        child: Text(
-          'Selamat Datang di Pemrograman Mobile!',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.deepPurple,
+        body: const Center(
+          child: Text(
+            'Selamat Datang di Pemrograman Mobile!',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.deepPurple,
+            ),
           ),
-          textAlign: TextAlign.center,
         ),
       ),
     );
